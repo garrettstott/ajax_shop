@@ -1,0 +1,28 @@
+.product-card {
+  display: inline-block;
+  height: 250px;
+  width: 300px;
+  background-color: grey;
+  padding: 0;
+  margin:5px;
+  border-radius: 5px;
+}
+
+
+.card-details {
+  margin: 5px;
+  color: lightgrey;
+}
+
+.index-product-name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buy-button {
+  float: right;
+}
+
+.testing {
+  color: red;
+}

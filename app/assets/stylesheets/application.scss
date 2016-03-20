@@ -1,0 +1,16 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'shared';
+@import 'products';
+
+.jumbo-div {
+  margin-top: 90px; 
+}
+
+.application {
+  margin-top: 60px;
+}
+
+body {
+  background-color: lightgrey;
+}
