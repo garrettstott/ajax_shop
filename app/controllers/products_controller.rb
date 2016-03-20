@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
 
   def show_user
     @product = params[:product]
+    @description = @product[:description]
     render(partial: 'show_product')
   end
 

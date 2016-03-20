@@ -1,16 +1,18 @@
 
 <div class='product-card col-md-4'> 
   <div class='card-details'>
-    <h3 class='index-product-name'><%= @product[:name] %></h3>
+    <h3 class='index-product-name bold'><%= @product[:name] %></h3>    
 
     <h4>Description:</h4>
-    <p class='testing'><%= @product[:description] == 'null' ? "[Coming Soon]" : @product[:description] %></p>
+    <p><%= @product[:description] == '' ? "Coming Soon" : @product[:description] %></p>
     
     <h4>Price:</h4>
-    <p class='testing'>$<%= @product[:base_price] == "null" ? "[0.00]" : @product[:base_price] %></p> 
+    <h3 class='price-color'>$<%= @product[:base_price] == '' ? "0.00" : @product[:base_price] %></h3> 
 
-    <button id='buy' data-id=<%= @product[:id] %> class='btn btn-success'>Buy</button>
-    <button id='edit' data-id=<%= @product[:id] %> class='btn btn-warning'>Edit</button>
-    <button id='delete' data-id=<%= @product[:id] %> class='btn btn-danger'>Delete</button>
+    <dic class='index-buttons'>
+      <button id='edit' data-id=<%= @product[:id] %> class='btn btn-warning'>Edit</button>
+      <button id='delete' data-id=<%= @product[:id] %> class='btn btn-danger'>Delete</button>
+      <button id='buy' data-id=<%= @product[:id] %> class='btn btn-success'>Buy</button>
+    </dic>
   </div>
 </div>
