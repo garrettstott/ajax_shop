@@ -1,10 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'shared';
 @import 'products';
 
 .jumbo-div {
   margin-top: 90px; 
+  background:    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('http://hdwallpapersfit.com/wp-content/uploads/2015/03/record-store-disk-vinyl-photo-greyscale-hd-wallpaper.jpg');
+  background-size: cover;
+  height: 500px;
+  color: white;
+}
+
+.index-button {
+  margin-top: 40px;
 }
 
 .application {

@@ -1,16 +1,15 @@
 
-<div class='product-card col-md-4'> 
+<div class='product-card col-sm-3'> 
   <div class='card-details'>
-    <h3 class='index-product-name bold'><%= @product[:name] %></h3>    
+    <h3 class='bold index-product-name'><%= @product[:name] %></h3>    
 
-    <h4>Description:</h4>
-    <p><%= @product[:description] == '' ? "Coming Soon" : @product[:description] %></p>
+    <h5 class='show-product-description'>Description:</h5>
+    <h3><%= @product[:description] == '' ? "Coming Soon" : @product[:description] %></h3>
     
-    <h4>Price:</h4>
-    <h3 class='price-color'>$<%= @product[:base_price] == '' ? "0.00" : @product[:base_price] %></h3> 
+    <h5 class='show-product-price'>Price: <span class='price-color'>$ <%= @product[:base_price] == '' ? " Not Listed" : @product[:base_price] %></span></h5>
 
-    <dic class='index-buttons'>
-      <button id='buy' data-id=<%= @product[:id] %> class='btn btn-success'>Buy</button>
-    </dic>
+    <div class='index-buttons'>
+      <button id='buy' data-id=<%= @product[:id] %> class='btn btn-success index-button'>Take my money!</button>
+    </div>
   </div>
 </div>

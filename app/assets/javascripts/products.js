@@ -26,20 +26,6 @@ $(document).ready(function() {
       $('#home_page').addClass('hidden');
     });
 
-    $(document).on('click', '.home_button', function(e) {
-      e.preventDefault();
-      $('#product_name').html('');
-      $('#product_description').html('');
-      $('#product_price').html('');
-      $('#products').removeClass('hidden');
-      $('#show_product').removeClass('hiddnen');
-      $('#show_product').addClass('hidden');
-      $('#form_div').removeClass('hidden');
-      $('#form_div').addClass('hidden');
-      $('#home_page').removeClass('hidden');
-      $('#home_page').addClass('hidden');
-    });
-
     function getProducts(data) {
       $('#products').html('');
       $.ajax({
@@ -82,10 +68,10 @@ $(document).ready(function() {
         success: function(data){
           var product = data.product;
           var description = product.description ? product.description : 'Coming Soon';
-          var price = product.base_price ? product.base_price : '0.00';
+          var price = product.base_price ? product.base_price : 'Not Listed';
           $('#product_name').append(product.name);
           $('#product_description').append(description);
-          $('#product_price').append('$' + price);
+          $('#product_price').append('$ ' + price);
           $('#delete').attr('data-id', product.id);
           $('#edit').attr('data-id', product.id);
           showProduct.removeClass('hidden');
@@ -134,6 +120,8 @@ $(document).ready(function() {
       form.find('#product_description').val('');
       form.find('#product_price').val('');
       $('#product_price').val('');
+      $('#home_page').removeClass('hidden');
+      $('#home_page').addClass('hidden');
       $('#products').addClass('hidden');
       $('#show_product').addClass('hidden');
       $('#form_div').removeClass('hidden');
@@ -182,27 +170,5 @@ $(document).ready(function() {
       });
     });
 
-
-
     getProducts();
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

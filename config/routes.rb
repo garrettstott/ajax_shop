@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   resources :products
 
   get '/product_card', to: 'products#product_card'
-  get '/show_user', to: 'products#show_user'
 end
