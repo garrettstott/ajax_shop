@@ -1,6 +1,10 @@
+<div id='home_page' class="jumbotron col-md-8 col-md-offset-2 jumbo-div">
+  <h1>My AJAX Shop</h1>
+  <p>Take a look at what we have to offer!</p>
+  <p><a class="shop_now_button btn btn-primary btn-lg" href="" role="button">Shop Now</a></p>
+</div>
 
-<h1 class='center-text'>My AJAX Shop</h1>
-<div id='products' class='col-md-12'></div>  
+<div id='products' class='col-md-12 hidden'></div>  
 
 
 <div id='show_product' class='col-md-6 col-md-offset-3 hidden grey'>
@@ -19,17 +23,18 @@
 <div id='form_div' class='hidden'>
   <div class='col-md-6 col-md-offset-3'>
     <form id='new_product_form'>
+      <h3 id='form_name'></h3>
       <label>Name</label>
       <br />
-      <input name='product[name]' type='text' />
+      <input id='product_name' name='product[name]' type='text' />
       <br />
       <label>Description</label>
       <br />
-      <input name'product[description]' type='textarea' />
+      <input id='product_description' name='product[description]' type='textarea' />
       <br />
       <label>Price</label>
       <br />
-      <input name'product[base_price]' type='number' />
+      <input id='product_price' name='product[base_price]' type='number' />
       <br />
       <button id='add_product_btn' type='submit' class='btn btn-success'>Add Product</button>
     </form>
