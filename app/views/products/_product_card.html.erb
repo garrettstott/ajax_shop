@@ -10,8 +10,6 @@
     <h3 class='price-color'>$<%= @product[:base_price] == '' ? "0.00" : @product[:base_price] %></h3> 
 
     <dic class='index-buttons'>
-      <button id='edit' data-id=<%= @product[:id] %> class='btn btn-warning'>Edit</button>
-      <button id='delete' data-id=<%= @product[:id] %> class='btn btn-danger'>Delete</button>
       <button id='buy' data-id=<%= @product[:id] %> class='btn btn-success'>Buy</button>
     </dic>
   </div>

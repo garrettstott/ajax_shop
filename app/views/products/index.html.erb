@@ -1,7 +1,6 @@
 
-<div id='products' class='col-md-12'>
-  <h1 class='center-text'>All Products</h1>
-</div>  
+<h1 class='center-text'>My AJAX Shop</h1>
+<div id='products' class='col-md-12'></div>  
 
 
 <div id='show_product' class='col-md-6 col-md-offset-3 hidden grey'>
@@ -9,8 +8,32 @@
   <p class='margin-top'>Description:</p>
   <h4 id='product_description'></h4>
   <h4 class='margin-top'>Price:</h4>
-  <h4 id='product_price' class='price-font-size price-color'>$ </h4>
-  <button id='back_button' class='btn btn-primary back-button'>Back</button>
+  <h4 id='product_price' class='price-font-size price-color'></h4>
+  <div id='admin_buttons' class='admin-buttons'>
+    <button id='back_button' class='btn btn-primary'>Back</button>
+    <button id='delete' class='btn btn-danger'>Delete</button>
+    <button id='edit' class='btn btn-warning'> Edit</button>
+  </div>
+</div>
+
+<div id='form_div' class='hidden'>
+  <div class='col-md-6 col-md-offset-3'>
+    <form id='new_product_form'>
+      <label>Name</label>
+      <br />
+      <input name='product[name]' type='text' />
+      <br />
+      <label>Description</label>
+      <br />
+      <input name'product[description]' type='textarea' />
+      <br />
+      <label>Price</label>
+      <br />
+      <input name'product[base_price]' type='number' />
+      <br />
+      <button id='add_product_btn' type='submit' class='btn btn-success'>Add Product</button>
+    </form>
+  </div>
 
 </div>
   
